@@ -1,0 +1,27 @@
+[submodule "Checkpoint"]
+	path = Checkpoint
+	url = git@github.com:FlagBrew/Checkpoint.git
+[submodule "Atmosphere"]
+	path = Atmosphere
+	url = git@github.com:Atmosphere-NX/Atmosphere.git
+[submodule "nx-hbmenu"]
+	path = nx-hbmenu
+	url = git@github.com:switchbrew/nx-hbmenu.git
+[submodule "nx-hbloader"]
+	path = nx-hbloader
+	url = git@github.com:switchbrew/nx-hbloader.git
+[submodule "ldn_mitm"]
+	path = ldn_mitm
+	url = git@github.com:spacemeowx2/ldn_mitm.git
+[submodule "meteo"]
+	path = meteo
+	url = git@github.com:RShadowhand/meteo
+[submodule "hb-appstore"]
+	path = hb-appstore
+	url = git@github.com:vgmoose/hb-appstore.git
+[submodule "ftpd"]
+	path = ftpd
+	url = git@github.com:mtheall/ftpd.git
+[submodule "hekate"]
+	path = hekate
+	url = git@github.com:CTCaer/hekate.git
