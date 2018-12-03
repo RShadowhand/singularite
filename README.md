@@ -17,6 +17,6 @@ Simplest, slimmest CFW distro.
 - Homebrew Menu
 - Météo Terrestre ((WIP) Userland KIP manager for Atmosphère)
 - Homebrew Appstore
-- JKSV
+- Checkpoint
 - FTPD
 - Tinfoil by Addubbz
