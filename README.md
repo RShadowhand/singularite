@@ -9,14 +9,11 @@ Simplest, slimmest CFW distro.
 
 ## What's included?
 - Pre-configured Hekate as bootloader
-- Météo Spatiale ((WIP) RCM KIP manager for Atmosphère)
 - Atmosphère
 - Sigpatches
-- Lan Play
+- Lan Play (ldn_mitm)
 - Homebrew Loader
 - Homebrew Menu
-- Météo Terrestre ((WIP) Userland KIP manager for Atmosphère)
-- Homebrew Appstore
 - Checkpoint
 - FTPD
 - Tinfoil by Addubbz
