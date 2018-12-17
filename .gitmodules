@@ -13,9 +13,6 @@
 [submodule "ldn_mitm"]
 	path = ldn_mitm
 	url = git@github.com:spacemeowx2/ldn_mitm.git
-[submodule "meteo"]
-	path = meteo
-	url = git@github.com:RShadowhand/meteo
 [submodule "ftpd"]
 	path = ftpd
 	url = git@github.com:mtheall/ftpd.git
