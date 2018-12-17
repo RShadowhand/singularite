@@ -10,9 +10,6 @@
 [submodule "nx-hbloader"]
 	path = nx-hbloader
 	url = git@github.com:switchbrew/nx-hbloader.git
-[submodule "ldn_mitm"]
-	path = ldn_mitm
-	url = git@github.com:spacemeowx2/ldn_mitm.git
 [submodule "ftpd"]
 	path = ftpd
 	url = git@github.com:mtheall/ftpd.git
