@@ -11,7 +11,6 @@ Simplest, slimmest CFW distro.
 - Pre-configured Hekate as bootloader
 - Atmosphère
 - Sigpatches
-- Lan Play (ldn_mitm)
 - Homebrew Loader
 - Homebrew Menu
 - Checkpoint
