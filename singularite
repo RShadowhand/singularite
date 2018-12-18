@@ -1,26 +1,36 @@
-all:
-	@mkdir _dist
-	@mkdir _dist/sd
-	@mkdir _dist/sd/switch
-	@mkdir _dist/sd/switch/Checkpoint
-	@mkdir _dist/sd/switch/ftpd
-	@mkdir _dist/sd/switch/tinfoil
-	@mkdir _dist/sd/bootloader
-	@mkdir _dist/sd/bootloader/ini
-	@mkdir _dist/sd/bootloader/payloads
-	@mkdir _dist/sd/bootloader/sys
-	@unzip ams.zip -d _dist/sd
+all: dirs ams hb static hkt
+
+clean:
+	@rm -rf _dist
+
+dirs:
+	@[ -d "_dist" ] || mkdir _dist
+	@[ -d "_dist/sd" ] || mkdir _dist/sd
+	@[ -d "_dist/sd/switch" ] || mkdir _dist/sd/switch
+	@[ -d "_dist/sd/switch/Checkpoint" ] || mkdir _dist/sd/switch/Checkpoint
+	@[ -d "_dist/sd/switch/ftpd" ] || mkdir _dist/sd/switch/ftpd
+	@[ -d "_dist/sd/switch/tinfoil" ] || mkdir _dist/sd/switch/tinfoil
+	@[ -d "_dist/sd/bootloader" ] || mkdir _dist/sd/bootloader
+	@[ -d "_dist/sd/bootloader/ini" ] || mkdir _dist/sd/bootloader/ini
+	@[ -d "_dist/sd/bootloader/payloads" ] || mkdir _dist/sd/bootloader/payloads
+	@[ -d "_dist/sd/bootloader/sys" ] || mkdir _dist/sd/bootloader/sys
+
+ams:
+	@unzip -o ams.zip -d _dist/sd
 	@cp fusee-primary.bin _dist/sd/bootloader/payloads/
-	@cp Checkpoint/switch/out/Checkpoint.nro _dist/sd/switch/Checkpoint/
-	@cp ftpd/ftpd.nro _dist/sd/switch/ftpd/
-	@cp hekate/output/hekate.bin _dist/hekate_ctcaer_4.6.bin
-	@cp hekate/output/libsys_lp0.bso _dist/sd/bootloader/sys/
+
+hb:
 	@cp nx-hbloader/hbl.nsp _dist/sd/atmosphere/
 	@cp nx-hbmenu/nx-hbmenu.nro _dist/sd/hbmenu.nro
+	@cp Checkpoint/switch/out/Checkpoint.nro _dist/sd/switch/Checkpoint/
+	@cp ftpd/ftpd.nro _dist/sd/switch/ftpd/
+
+static:
 	@cp _static/sigpatches/atmosphere _dist/sd/ -R
 	@cp _static/tinfoil/tinfoil.nro _dist/sd/switch/tinfoil/
 	@cp _static/tinfoil/usb_install_pc.py _dist/
 	@cp _static/singularite/hekate_ipl.ini _dist/sd/bootloader/
 
-clean:
-	@rm -rf _dist
+hkt:
+	@cp hekate/output/hekate.bin _dist/hekate_ctcaer_4.6.bin
+	@cp hekate/output/libsys_lp0.bso _dist/sd/bootloader/sys/

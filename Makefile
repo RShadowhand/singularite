@@ -1,4 +1,7 @@
-VERSION := "1.0"
+MAJORVER := "1"
+MINORVER := "0"
+MICROVER := "0"
+VERSION := $(MAJORVER)$(MINORVER)$(MICROVER)
 COMMIT := $(shell git rev-parse --short HEAD)
 all: ams checkpoint ftp hkt hbloader hbmenu sin
 
@@ -18,8 +21,8 @@ ams:
 	@echo "Downloading AMS because compiling may not be possible."
 	@echo "Contact SciresM for help!"
 	@echo "------------------------------------------------------"
-	@wget "https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.8.2/atmosphere-0.8.2-master-84c776f.zip" -O ams.zip
-	@wget "https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.8.2/fusee-primary.bin"
+	@[ -f ams.zip ] || wget "https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.8.2/atmosphere-0.8.2-master-84c776f.zip" -O ams.zip
+	@[ -f fusee-primary.bin ] || wget "https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.8.2/fusee-primary.bin" -O fusee-primary.bin
 
 ams_real:
 	$(MAKE) -C Atmosphere
