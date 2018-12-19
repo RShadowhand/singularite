@@ -31,6 +31,7 @@ static:
 	@cp _static/tinfoil/tinfoil.nro _dist/sd/switch/tinfoil/
 	@cp _static/tinfoil/usb_install_pc.py _dist/
 	@cp _static/singularite/hekate_ipl.ini _dist/sd/bootloader/
+	@cp _static/singularite/bootlogo.bmp _dist/sd/bootloader/
 
 hkt:
 	@cp hekate/output/hekate.bin _dist/hekate_ctcaer_4.6.bin
