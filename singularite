@@ -27,6 +27,7 @@ hb:
 
 static:
 	@cp _static/sigpatches/atmosphere _dist/sd/ -R
+	@cp _static/singularite/config _dist/sd/ -R
 	@cp _static/tinfoil/tinfoil.nro _dist/sd/switch/tinfoil/
 	@cp _static/tinfoil/usb_install_pc.py _dist/
 	@cp _static/singularite/hekate_ipl.ini _dist/sd/bootloader/
