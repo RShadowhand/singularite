@@ -16,3 +16,12 @@
 [submodule "hekate"]
 	path = hekate
 	url = git@github.com:CTCaer/hekate.git
+[submodule "SwitchThemeInjector"]
+	path = SwitchThemeInjector
+	url = git@github.com:exelix11/SwitchThemeInjector.git
+[submodule "NX-Shell"]
+	path = NX-Shell
+	url = git@github.com:joel16/NX-Shell.git
+[submodule "KipSelect"]
+	path = KipSelect
+	url = git@github.com:Sciguy429/KipSelect.git

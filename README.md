@@ -16,7 +16,12 @@ Everything you need to get started, in a neatly packaged file.
 - **Homebrew Menu**.
 - **Checkpoint**.
 - **FTPD**.
+- **SwitchThemeNX**. (Visit their [repo](https://github.com/exelix11/SwitchThemeInjector) for more information)
+- **NX-Shell**.
+- **KipSelect**.
 - **Tinfoil**, by Adubbz.
+- **Monochrome**, a black and white theme for **Homebrew Menu**.
+- **Black**, a pitch black theme for your Home Menu, Lockscreen, All Apps, and Settings. Check `DumpingFilesForThemes.md` for more info.
 
 ## Compile on your own
 1) Make sure your development environment is complete:
@@ -30,6 +35,9 @@ Everything you need to get started, in a neatly packaged file.
 - It may not be possible to compile Atmosphere right now, for more info, contact @SciresM.
   - For this reason, Singularité downloads 0.8.2 release for the time being.
   - As soon as it's possible to compile it without special requirements, makefile will be updated.
+- It may not be possible to build NX-Shell, and KipSelect right now. For more info, visit their repos, or contact their devs.
+  - For this reason, Singularité downloads both of these at their latest release for the time being.
+  - As soon as it's possible to compile these without special requirements, makefile will be updated.
 - Tinfoil is added as prebuilt, as it's not actively being developed, and the history of it is rather hazy.
 - Instead of `hekate_ctcaer_4.6.bin`, you can push `fusee-primary.bin` for Atmosphere 0.8.2.
   - You can find it in `_dist/bootloader/payloads` folder.
@@ -42,6 +50,9 @@ Everything you need to get started, in a neatly packaged file.
 - Everyone that contributed to `nx-hbmenu`.
 - @BernardoGiordano, and the FlagBrew team.
 - mtheall, and everyone that contributed to `FTPD`
+- @exelix and Qcean team.
+- @Sciguy429, for `KipSelect`.
+- @joel16 for `NX-Shell`.
 - Adubbz.
 - WinterMute, and everyone that contributed to devkitpro, devkitARM, devkitA64, libnx.
 

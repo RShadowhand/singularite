@@ -1,4 +1,4 @@
-all: dirs ams hb static hkt
+all: dirs ams nxshell kipselect nxtheme hb static hkt
 
 clean:
 	@rm -rf _dist
@@ -6,18 +6,36 @@ clean:
 dirs:
 	@[ -d "_dist" ] || mkdir _dist
 	@[ -d "_dist/sd" ] || mkdir _dist/sd
+	@[ -d "_dist/sd/tinfoil" ] || mkdir _dist/sd/tinfoil
+	@[ -d "_dist/sd/tinfoil/nsp" ] || mkdir _dist/sd/tinfoil/nsp
 	@[ -d "_dist/sd/switch" ] || mkdir _dist/sd/switch
 	@[ -d "_dist/sd/switch/Checkpoint" ] || mkdir _dist/sd/switch/Checkpoint
 	@[ -d "_dist/sd/switch/ftpd" ] || mkdir _dist/sd/switch/ftpd
+	@[ -d "_dist/sd/switch/NX-Shell" ] || mkdir _dist/sd/switch/NX-Shell
+	@[ -d "_dist/sd/switch/Kip_Select" ] || mkdir _dist/sd/switch/Kip_Select
+	@[ -d "_dist/sd/switch/SwitchThemesNX" ] || mkdir _dist/sd/switch/SwitchThemesNX
 	@[ -d "_dist/sd/switch/tinfoil" ] || mkdir _dist/sd/switch/tinfoil
 	@[ -d "_dist/sd/bootloader" ] || mkdir _dist/sd/bootloader
 	@[ -d "_dist/sd/bootloader/ini" ] || mkdir _dist/sd/bootloader/ini
 	@[ -d "_dist/sd/bootloader/payloads" ] || mkdir _dist/sd/bootloader/payloads
 	@[ -d "_dist/sd/bootloader/sys" ] || mkdir _dist/sd/bootloader/sys
+	@[ -d "_dist/sd/atmosphere" ] || mkdir _dist/sd/atmosphere
+	@[ -d "_dist/sd/atmosphere/kips" ] || mkdir _dist/sd/atmosphere/kips
+	@[ -d "_dist/sd/atmosphere/kips_disabled" ] || mkdir _dist/sd/atmosphere/kips_disabled
 
 ams:
 	@unzip -o ams.zip -d _dist/sd
 	@cp fusee-primary.bin _dist/sd/bootloader/payloads/
+
+nxshell:
+	@cp NX-Shell.nro _dist/sd/switch/NX-Shell/
+
+kipselect:
+	@cp Kip_Select.nro _dist/sd/switch/Kip_Select/
+
+nxtheme:
+	@cp SwitchThemeInjector/SwitchThemesNX/SwitchThemesNX.nro _dist/sd/switch/SwitchThemesNX/SwitchThemesNX.nro
+	@cp SwitchThemeInjector/DumpingFiles.md _dist/DumpingFilesForThemes.md
 
 hb:
 	@cp nx-hbloader/hbl.nsp _dist/sd/atmosphere/
@@ -28,6 +46,7 @@ hb:
 static:
 	@cp _static/sigpatches/atmosphere _dist/sd/ -R
 	@cp _static/singularite/config _dist/sd/ -R
+	@cp _static/singularite/themes _dist/sd/ -R
 	@cp _static/tinfoil/tinfoil.nro _dist/sd/switch/tinfoil/
 	@cp _static/tinfoil/usb_install_pc.py _dist/
 	@cp _static/singularite/hekate_ipl.ini _dist/sd/bootloader/
