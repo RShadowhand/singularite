@@ -1,6 +1,6 @@
 MAJORVER := "1"
 MINORVER := "1"
-MICROVER := "1"
+MICROVER := "2"
 VERSION := $(MAJORVER)$(MINORVER)$(MICROVER)
 COMMIT := $(shell git rev-parse --short HEAD)
 all: checkpoint ftp hkt hbloader hbmenu nxtheme ams nxshell kipselect sin
@@ -11,12 +11,10 @@ clean:
 	$(MAKE) -C hekate clean
 	$(MAKE) -C nx-hbloader clean
 	$(MAKE) -C nx-hbmenu clean
+	$(MAKE) -C KipSelect clean
 	$(MAKE) -C SwitchThemeInjector/SwitchThemesNX clean
 	$(MAKE) -f singularite clean
-	@rm -rf ams.zip
-	@rm -rf fusee-primary.bin
 	@rm -rf singularite*.zip
-	@rm -rf Kip_Select.nro
 	@rm -rf NX-Shell.nro
 
 ams:
