@@ -21,10 +21,6 @@ clean:
 
 ams:
 	@$(MAKE) -C Atmosphere dist
-	@echo "---------------------------------------------------------------"
-	@echo "Downloading fusee-primary."
-	@echo "---------------------------------------------------------------"
-	@[ -f fusee-primary.bin ] || wget "https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.8.2/fusee-primary.bin" -O fusee-primary.bin
 
 nxshell:
 	@echo "---------------------------------------------------------------"

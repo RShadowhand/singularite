@@ -24,8 +24,9 @@ dirs:
 	@[ -d "_dist/sd/atmosphere/kips_disabled" ] || mkdir _dist/sd/atmosphere/kips_disabled
 
 ams:
-	@cp Atmosphere/atmosphere-*/atmosphere _dist/sd/ -R
-	@cp fusee-primary.bin _dist/sd/bootloader/payloads/
+	@unzip -o Atmosphere/out/*.zip -d Atmosphere/out
+	@cp Atmosphere/out/atmosphere _dist/sd/ -R
+	@cp Atmosphere/out/fusee-primary.bin _dist/sd/bootloader/payloads/
 
 nxshell:
 	@cp NX-Shell.nro _dist/sd/switch/NX-Shell/
