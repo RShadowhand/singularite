@@ -27,17 +27,15 @@ Everything you need to get started, in a neatly packaged file.
 1) Make sure your development environment is complete:
    - devkitpro, devkitARM, devkitA64
    - libnx
+   - SDL2
    - for other dependencies of included submodules, check their respective pages.
 2) Clone this repo: `git clone --recursive https://github.com/RShadowhand/singularite.git`
 3) Run `make` or `make release`
 
 ## Notes:
-- It may not be possible to compile Atmosphere right now, for more info, contact @SciresM.
-  - For this reason, Singularité downloads 0.8.2 release for the time being.
+- It may not be possible to build NX-Shell right now. For more info, visit NX-Shell repo, or contact joel16.
+  - For this reason, Singularité downloads NX-Shell at latest release for the time being.
   - As soon as it's possible to compile it without special requirements, makefile will be updated.
-- It may not be possible to build NX-Shell, and KipSelect right now. For more info, visit their repos, or contact their devs.
-  - For this reason, Singularité downloads both of these at their latest release for the time being.
-  - As soon as it's possible to compile these without special requirements, makefile will be updated.
 - Tinfoil is added as prebuilt, as it's not actively being developed, and the history of it is rather hazy.
 - Instead of `hekate_ctcaer_4.6.bin`, you can push `fusee-primary.bin` for Atmosphere 0.8.2.
   - You can find it in `_dist/bootloader/payloads` folder.
