@@ -27,14 +27,10 @@ nxshell:
 	@echo "Downloading NX-Shell, because compiling may not be possible."
 	@echo "Visit https://github.com/joel16/NX-Shell for help!"
 	@echo "---------------------------------------------------------------"
-	@[ -f NX-Shell.nro ] || wget "https://github.com/joel16/NX-Shell/releases/download/1.10/NX-Shell.nro" -O NX-Shell.nro
+	@[ -f NX-Shell.nro ] || wget "https://github.com/joel16/NX-Shell/releases/download/1.20/NX-Shell.nro" -O NX-Shell.nro
 
 kipselect:
-	@echo "---------------------------------------------------------------"
-	@echo "Downloading KipSelect, because compiling may not be possible."
-	@echo "Visit https://github.com/Sciguy429/KipSelect for help!"
-	@echo "---------------------------------------------------------------"
-	@[ -f Kip_Select.nro ] || wget "https://github.com/Sciguy429/KipSelect/releases/download/3.0.1/Kip_Select_V3.0.1.nro" -O Kip_Select.nro
+	@$(MAKE) -C KipSelect
 
 nxtheme:
 	@$(MAKE) -C SwitchThemeInjector/SwitchThemesNX
