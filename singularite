@@ -32,7 +32,7 @@ nxshell:
 	@cp NX-Shell.nro _dist/sd/switch/NX-Shell/
 
 kipselect:
-	@cp Kip_Select/out/Kip_Select.nro _dist/sd/switch/Kip_Select/
+	@cp KipSelect/out/Kip_Select.nro _dist/sd/switch/Kip_Select/
 
 nxtheme:
 	@cp SwitchThemeInjector/SwitchThemesNX/SwitchThemesNX.nro _dist/sd/switch/SwitchThemesNX/SwitchThemesNX.nro
