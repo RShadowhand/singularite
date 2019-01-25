@@ -57,3 +57,4 @@ static:
 hkt:
 	@cp hekate/output/hekate.bin _dist/hekate_ctcaer_4.6.bin
 	@cp hekate/output/libsys_lp0.bso _dist/sd/bootloader/sys/
+	@cp hekate/output/hekate.bin _dist/sd/atmosphere/reboot_payload.bin
