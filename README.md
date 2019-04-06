@@ -1,22 +1,22 @@
 # Singularité
-Simplest, slimmest, transparent CFW distro.  
+Simplest, slimmest, transparent CFW distro.
 Everything you need to get started, in a neatly packaged file.
 
 ## How to install
 1) Download latest release.
 2) Copy `sd` contents into the root of your SD card.
-3) Push `hekate_ctcaer_4.6.bin` with your preferred method.
+3) Push `hekate_ctcaer_4.9.1.bin` with your preferred method.
 4) Done!
 
 ## What's included?
 - Pure and full **Atmosphere**. Not gutted, not chopped.
 - **Sigpatches** for Atmosphere.
-- Pre-configured **Hekate v4.6**.
+- Pre-configured **Hekate v4.9.1**.
 - **Homebrew Loader**.
 - **Homebrew Menu**.
 - **Checkpoint**.
 - **FTPD**.
-- **SwitchThemeNX**. (Visit their [repo](https://github.com/exelix11/SwitchThemeInjector) for more information)
+- ~~**SwitchThemeNX**.~~ (Removed temporarily. You can download it from their [repo](https://github.com/exelix11/SwitchThemeInjector).)
 - **NX-Shell**.
 - **KipSelect**.
 - **Tinfoil**, by Adubbz.
@@ -37,7 +37,7 @@ Everything you need to get started, in a neatly packaged file.
   - For this reason, Singularité downloads NX-Shell at latest release for the time being.
   - As soon as it's possible to compile it without special requirements, makefile will be updated.
 - Tinfoil is added as prebuilt, as it's not actively being developed, and the history of it is rather hazy.
-- Instead of `hekate_ctcaer_4.6.bin`, you can push `fusee-primary.bin` for Atmosphere 0.8.2.
+- Instead of `hekate_ctcaer_4.9.1.bin`, you can push `fusee-primary.bin` for Atmosphere 0.8.2.
   - You can find it in `_dist/bootloader/payloads` folder.
 
 ## Credits
@@ -55,6 +55,6 @@ Everything you need to get started, in a neatly packaged file.
 - WinterMute, and everyone that contributed to devkitpro, devkitARM, devkitA64, libnx.
 
 ## License
-Licensed under GPLv3. For more information, read `LICENSE`.  
-Additionally, can not be used to commercial gain.  
+Licensed under GPLv3. For more information, read `LICENSE`.
+Additionally, can not be used to commercial gain.
 This project respects any all licenses of its submodules. See submodule pages for their respective licenses.

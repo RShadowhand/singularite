@@ -1,4 +1,4 @@
-all: dirs ams nxshell kipselect nxtheme hb static hkt
+all: dirs ams nxshell kipselect hb static hkt
 
 clean:
 	@rm -rf _dist
@@ -13,7 +13,6 @@ dirs:
 	@[ -d "_dist/sd/switch/ftpd" ] || mkdir _dist/sd/switch/ftpd
 	@[ -d "_dist/sd/switch/NX-Shell" ] || mkdir _dist/sd/switch/NX-Shell
 	@[ -d "_dist/sd/switch/Kip_Select" ] || mkdir _dist/sd/switch/Kip_Select
-	@[ -d "_dist/sd/switch/SwitchThemesNX" ] || mkdir _dist/sd/switch/SwitchThemesNX
 	@[ -d "_dist/sd/switch/tinfoil" ] || mkdir _dist/sd/switch/tinfoil
 	@[ -d "_dist/sd/bootloader" ] || mkdir _dist/sd/bootloader
 	@[ -d "_dist/sd/bootloader/ini" ] || mkdir _dist/sd/bootloader/ini
@@ -24,30 +23,29 @@ dirs:
 	@[ -d "_dist/sd/atmosphere/kips_disabled" ] || mkdir _dist/sd/atmosphere/kips_disabled
 
 ams:
-	@unzip -o Atmosphere/out/*.zip -d Atmosphere/out
-	@cp Atmosphere/out/atmosphere _dist/sd/ -R
-	@cp Atmosphere/out/fusee-primary.bin _dist/sd/bootloader/payloads/
+	# @unzip -o Atmosphere/out/*.zip -d Atmosphere/out
+	# @cp Atmosphere/out/atmosphere _dist/sd/ -R
+	# @cp Atmosphere/out/sept _dist/sd/ -R
+	# @cp Atmosphere/out/fusee-primary.bin _dist/sd/bootloader/payloads/
+	@unzip -o ams.zip -d Atmosphere/out
+	@cp Atmosphere/out/* _dist/sd/ -R
+	@cp fusee-primary.bin _dist/sd/bootloader/payloads/ -R
 
 nxshell:
 	@cp NX-Shell.nro _dist/sd/switch/NX-Shell/
 
 kipselect:
-	@cp KipSelect/out/Kip_Select.nro _dist/sd/switch/Kip_Select/
-
-nxtheme:
-	@cp SwitchThemeInjector/SwitchThemesNX/SwitchThemesNX.nro _dist/sd/switch/SwitchThemesNX/SwitchThemesNX.nro
-	@cp SwitchThemeInjector/DumpingFiles.md _dist/DumpingFilesForThemes.md
+	@cp Kip_Select.nro _dist/sd/switch/Kip_Select/
 
 hb:
-	@cp nx-hbloader/hbl.nsp _dist/sd/atmosphere/
-	@cp nx-hbmenu/nx-hbmenu.nro _dist/sd/hbmenu.nro
+	# @cp nx-hbloader/hbl.nsp _dist/sd/atmosphere/
+	# @cp nx-hbmenu/nx-hbmenu.nro _dist/sd/hbmenu.nro
 	@cp Checkpoint/switch/out/Checkpoint.nro _dist/sd/switch/Checkpoint/
 	@cp ftpd/ftpd.nro _dist/sd/switch/ftpd/
 
 static:
 	@cp _static/sigpatches/atmosphere _dist/sd/ -R
 	@cp _static/singularite/config _dist/sd/ -R
-	@cp _static/singularite/themes _dist/sd/ -R
 	@cp _static/tinfoil/tinfoil.nro _dist/sd/switch/tinfoil/
 	@cp _static/tinfoil/usb_install_pc.py _dist/
 	@cp _static/singularite/hekate_ipl.ini _dist/sd/bootloader/
@@ -55,6 +53,6 @@ static:
 	@cp README.md _dist/
 
 hkt:
-	@cp hekate/output/hekate.bin _dist/hekate_ctcaer_4.6.bin
+	@cp hekate/output/hekate.bin _dist/hekate_ctcaer_4.9.1.bin
 	@cp hekate/output/libsys_lp0.bso _dist/sd/bootloader/sys/
 	@cp hekate/output/hekate.bin _dist/sd/atmosphere/reboot_payload.bin
